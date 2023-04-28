@@ -14,5 +14,6 @@ generic:
     enabled: false
 preview:
   enabled: false
-hosts:
-- "demo-back-<YOUR_NAME>.playground.padok.cloud"
+
+host:
+- "demo-back-oscarp.playground.padok.cloud"
