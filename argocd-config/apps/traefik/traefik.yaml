@@ -15,6 +15,9 @@ spec:
     name: in-cluster
   project: infrastructure
   source:
+    helm:
+      valueFiles:
+        - values.yaml
     path: apps/traefik
     repoURL: https://github.com/OscarPoels/training-CICD
     targetRevision: HEAD
