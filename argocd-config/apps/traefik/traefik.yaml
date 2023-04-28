@@ -13,7 +13,7 @@ spec:
   destination:
     namespace: default
     name: in-cluster
-  project: default
+  project: infrastructure
   source:
     path: apps/traefik
     repoURL: https://github.com/OscarPoels/training-CICD
