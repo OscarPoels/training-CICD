@@ -11,6 +11,8 @@ spec:
     name: in-cluster
   project: default
   source:
+    directory: 
+      recurse: true
     path: argocd-config
     repoURL: https://github.com/OscarPoels/training-CICD
     targetRevision: HEAD
