@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  syncPolicy:
+    automated: 
+      prune: true
+      selfHeal: true
+  destination:
+    namespace: default
+    name: in-cluster
+  project: infrastructure
+  source:
+    helm:
+      valueFiles:
+        - values.yaml
+    path: apps/demo
+    repoURL: https://github.com/OscarPoels/training-CICD
+    targetRevision: HEAD
